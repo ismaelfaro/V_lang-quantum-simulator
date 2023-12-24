@@ -13,8 +13,17 @@ You can understand how work a quamtum computer from the code. The code is devide
         - outputs: 
             - statevector
 
+# Install
+
+Visit https://vlang.io and install the language
+
+# Run
+
+> v run .
+
 # Example:
-'''
+
+```
 qubits := i32(10)
 
 mut qc := QuantumCircuit{qubits: qubits}
@@ -37,8 +46,10 @@ mut qsim := QuantumSimulator{qubits: qubits, circuit: qc}
 qsim.init()
 qsim.run(1024)
 
-print(qsim)     
-'''
+print(qsim) 
+```
+    
+
 
 # Issues:
 the low performance of Vlang handle the huge amount of text is significat. Be carefully is you want to print the result with more than 14 qubits. 
