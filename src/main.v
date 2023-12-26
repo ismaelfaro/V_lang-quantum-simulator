@@ -125,8 +125,8 @@ fn (mut this QuantumSimulator) state_vector2str() string {
 	mut output := ''
 	for i in 0 .. this.state_vector.len {
 		value := this.state_vector[i]
-		// bits := '[${int(i):010}]'
-		bits := ' '
+		bits := '[${int(i):b}]'
+		// bits := ' '
 		output += bits + ' ' + value.r.str() + '+' + value.i.str() + 'j\n'
 	}
 	return output
@@ -211,7 +211,7 @@ pub fn (mut this QuantumSimulator) run(shots i32) {
 }
 
 fn main() {
-	qubits := i32(10)
+	qubits := i32(18)
 
 	mut qc := QuantumCircuit{
 		qubits: qubits
