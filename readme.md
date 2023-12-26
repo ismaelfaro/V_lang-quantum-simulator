@@ -17,9 +17,17 @@ You can understand how work a quamtum computer from the code. The code is devide
 
 Visit https://vlang.io and install the language
 
+```
+git clone https://github.com/ismaelfaro/V_lang-quantum-simulator.git
+
+cd V_lang-quantum-simulator
+```
+
 # Run
 
-> v run .
+```
+v run .
+```
 
 # Example:
 
