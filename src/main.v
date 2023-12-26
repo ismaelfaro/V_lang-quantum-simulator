@@ -211,7 +211,7 @@ pub fn (mut this QuantumSimulator) run(shots i32) {
 }
 
 fn main() {
-	qubits := i32(18)
+	qubits := i32(10)
 
 	mut qc := QuantumCircuit{
 		qubits: qubits
