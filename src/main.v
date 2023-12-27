@@ -2,6 +2,7 @@ module main
 
 import math
 import rand
+import strings
 
 const r2 = 0.70710678118
 
@@ -122,14 +123,16 @@ fn (mut this QuantumSimulator) probability(shots i32) []string {
 }
 
 fn (mut this QuantumSimulator) state_vector2str() string {
-	mut output := ''
+	mut output  := strings.new_builder(1)
 	for i in 0 .. this.state_vector.len {
 		value := this.state_vector[i]
-		bits := '[${int(i):b}]'
-		// bits := ' '
-		output += bits + ' ' + value.r.str() + '+' + value.i.str() + 'j\n'
+		output.write_string('[${int(i):b}]: ') // concatenate the bits string index
+		output.write_string(value.r.str())   // concatenate the Value real part
+		output.write_string('+') 
+		output.write_string(value.i.str())   // concatenate the Value imaginary part
+		output.write_string('j\n') 
 	}
-	return output
+	return output.str()
 }
 
 pub fn (mut this QuantumSimulator) str() string {
