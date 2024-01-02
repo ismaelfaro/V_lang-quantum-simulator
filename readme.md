@@ -57,11 +57,6 @@ qsim.run(1024)
 print(qsim) 
 ```
     
-
-
-# Issues:
-the low performance of Vlang handle the huge amount of text is significat. Be carefully is you want to print the result with more than 14 qubits. 
-
 # TODO:
 - refactor the code to be more Vlang friendly
 - fix the outputs for
